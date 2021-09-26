@@ -1,0 +1,27 @@
+.card-actualy{
+
+    position: relative;
+    img{
+        @include image-state(100%, 240px, 0, 2.4rem, 0);
+    }
+    
+    .date{
+        @include date($margin-bottom:1.6rem);
+    }
+    h3{
+        margin-bottom: .8em;
+    }
+}
+  
+.card-module{
+
+    position: relative;
+  
+    img{
+        @include image-state(100%, 240px, 0, 4rem, 0);
+    }
+    h3{
+        margin-bottom: 4rem;
+    }
+}
+

@@ -1,0 +1,101 @@
+//mixin number-column : width, row-gap, column-gap
+
+.grid-actuality{
+    @include number-column(1fr, 3.2rem, 3.2rem);
+    @media screen and (min-width:768px){
+        @include number-column(repeat(3, 1fr), 3.2rem, 3.2rem);
+    }
+}
+
+.grid-module{
+    @include number-column(1fr, 3.2rem, 3.2rem);
+    padding-bottom: 4rem;
+    @media screen and (min-width:768px){
+        @include number-column(repeat(2, 1fr), 3.2rem, 3.2rem);
+    }
+
+}
+
+.grid-student{
+    @include number-column(1fr, 3.2rem, 3.2rem);
+    .profil-avatar{
+        justify-self: center;
+    }
+
+    @media screen and (min-width:560px){
+        @include number-column(repeat(2, 1fr), 3.2rem, auto);
+    }
+    @media screen and (min-width:1200px){
+        @include number-column(repeat(4, 1fr), 3.2rem, auto);
+    }
+
+}
+
+.grid-portrait{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    max-width: 90rem;
+        margin: 0 auto;
+    
+    .title-item-portrait{
+        font-family: 'Raleway';
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    @media screen and (min-width:560px){
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3.6rem;
+        grid-template-areas: "a b"
+                             "c d"
+                             "e f"
+                             "g h"
+                             "i i"
+                             "i i";
+
+        .movie{
+            grid-area: a;
+        }
+        
+        .serie{
+            grid-area: b;
+        }
+        
+        .game{
+            grid-area: c;
+        }
+        
+        .heroin{
+            grid-area: d;
+        }
+        
+        .book{
+            grid-area: e;
+        }
+        
+        .song{
+            grid-area: f;
+        }
+        
+        .appli{
+            grid-area: g;
+        }
+        
+        .site-web{
+            grid-area: h;
+        }
+        
+        .bio{
+            grid-area: i;
+        }
+    }
+
+    @media screen and (min-width:1330px){
+        max-width: 100%;
+        grid-template-columns: repeat(4, 29rem);
+        grid-template-areas: "a b c d"
+                        "e f g h"
+                        "i i i i";
+    }
+}

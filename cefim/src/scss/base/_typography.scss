@@ -1,0 +1,16 @@
+/**
+ * Basic typography style for copy text
+ */
+ body{
+  @include global-font();
+}
+
+h1,
+h2
+{
+  @include title-font(700);
+}
+
+h3,h4{
+  @include title-font(600);
+}

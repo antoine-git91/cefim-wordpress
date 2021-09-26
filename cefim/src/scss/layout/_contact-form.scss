@@ -1,0 +1,17 @@
+.contact, form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 106rem;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .textarea-form{
+        width: 100%;
+    }
+
+    @media screen and (min-width:768px) {
+        flex-direction:row;
+    }
+}

@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin title-font($weight) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin global-font($weight : 400) {
+  font-family: 'Montserrat';
+  font-weight: $weight;
+  font-size: 2rem;
+}
+
+@mixin ifBackgroundOrange(){
+  background-color: $brand-color;
+  color: #fff;
+
+  a{
+    color: #fff;
+
+    &:hover, &:focus, &:active, &[aria-current = 'page']{
+      color: $text-color;
+    }
+  }
+}
+
+@mixin link-hover-white($padding: 1rem 2rem){
+  padding: $padding;
+  &:hover, &:focus, &:active{
+    color: $brand-color;
+    background-color: #fff;
+  }
+}
+
+@mixin link-hover-orange($padding : 2rem 3rem){
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: $padding;
+  background-color: $brand-color;
+  &:hover, &:focus, &:active{
+    background-color: #fff;
+    color: $brand-color;
+  }
+}
+
+@mixin button-pagination($color: $brand-color, $background-color: transparent ){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid $brand-color;
+  border-radius: .2em;
+  margin-right: 2rem;
+  cursor: pointer;
+  text-align: center;
+  background-color: $background-color;
+}
+
+@mixin number-column($grid-template-columns: 1fr, $row-gap, $column-gap) {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: $grid-template-columns;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+@mixin image-state($width, $height, $margin-top: 4rem, $margin-bottom: 4rem, $border-radius: 0) {
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  object-fit: cover;
+  object-position: center;
+  border-radius: $border-radius;
+}
+
+@mixin date($text-align: left, $font-size: 1.6rem, $margin-bottom:4rem){
+  color: #663014;
+  text-align: $text-align;
+  font-size: $font-size;
+  margin-bottom: $margin-bottom;
+
+    &::before{
+        content: url(../pictures/icon/date-1.svg);
+        margin-right: .8em;
+    }
+}
+
+@mixin line-clamp($number-lines, $number-lines_responsive) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number-lines;
+  overflow: hidden;
+
+  @media screen and (min-width:768px){
+    -webkit-line-clamp: $number-lines_responsive;
+  }
+}
+
+@mixin section-home($padding-top:4rem, $padding-bottom: 4rem, $background-color:transparent,$color-font:$text-color){
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $background-color;
+
+  h2:first-child{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  h2,h3,h4,p{
+    color: $color-font;
+  }
+}
+
+@mixin text-user-field {
+  border: transparent;
+  border-bottom: 1px solid #707070;
+  width: 100%;
+}

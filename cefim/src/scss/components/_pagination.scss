@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    background-color: initial;
+}
+
+.nav-links {
+    display: flex;
+
+    & *:last-child{
+        margin-right: 0;
+    }
+
+    .page-numbers.current{
+        @include button-pagination(#fff, $brand-color );
+    }
+
+    .page-numbers.dots{
+        color: $brand-color;
+    }
+
+    a{
+        @include button-pagination;
+
+        &:hover{
+            background-color: $brand-color;
+            border-color: #fff;
+            color: #fff;
+        }
+     }
+}

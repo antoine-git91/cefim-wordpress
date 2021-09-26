@@ -1,0 +1,30 @@
+.detail-box{
+
+  width: 30rem;
+  border: 2px solid $brand-color;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+
+
+  .title-box{
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .content-box{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+
+    a{
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: $brand-color;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+}

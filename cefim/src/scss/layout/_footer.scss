@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer{
+    background-color: $brand-color;
+    @include ifBackgroundOrange();
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+
+    .footer-content{
+        text-align: center;
+    }
+
+    address{
+        line-height: 1.8;
+
+        .role{
+            font-weight: 600;
+        }
+    }
+
+    .nav-footer {
+        
+        ul{
+            
+            width: 100%;
+            padding-left: 0;           
+    
+            li:not(:last-child) a{
+                margin-bottom: 2rem;
+            }
+    
+            a{
+                position: relative;
+                font-size: 1.6rem;
+                display: block;
+                transition: .3s;
+            }
+
+            @media screen and (min-width:768px){
+                display: flex;
+                justify-content: center;
+
+                li:not(:last-child) a{
+                    margin-bottom: 0rem;
+                    margin-right: 2rem;
+                }
+            } 
+        }
+    }
+
+    .social{
+        display: none;
+    }
+
+    @media screen and (min-width:1024px){
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        .social{
+            display: flex;
+        }
+    }
+}

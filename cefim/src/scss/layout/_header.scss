@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header{
+    @media screen and (min-width:1024px) {
+        &{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+    }
+}
+
+#main-nav{
+    @include ifBackgroundOrange();
+    display: flex;
+    justify-content: space-between;
+    padding: 2.2rem 0;
+
+    .logo{
+        font-family: 'Raleway', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+
+        @media screen and (min-width:768px) {
+            font-size: 4.8rem;
+        }
+    }
+
+    /* LOGO + MENU*/
+    .nav-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* MENU PRINCIPAL + MENU SOCIAL*/
+    .main-menus{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-color;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateX(100%);
+        z-index: 999;
+
+        a{
+            display: inline-block;
+            font-size: 3rem;
+            transition: .3s;
+        }
+
+        .menu-item{
+            font-weight: 500;
+        }
+
+        .social{
+            flex-direction: row;
+        }
+    }
+
+    #toggle-menu{
+        position: fixed;
+        display: block;
+        right: 3rem;
+        top: 1rem;
+        width: 6rem;
+        height: 6rem;
+        z-index: 1000;
+        cursor: pointer;
+        background-color: $brand-color;
+        border-radius: 1rem;
+
+        @media screen and (min-width:768px) {
+            width: 8rem;
+            height: 7rem;
+            top: 2.5rem;
+
+        }
+
+        span{
+            position: absolute;
+            display: inline-block;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: .4rem;
+            background-color: #fff;
+            border-radius: .3rem;
+
+            &:first-child{
+                top: 1rem;
+            }
+
+            &:nth-child(2){
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:last-child{
+                bottom: 1rem;
+            }
+        }
+    }
+    #toggle-menu[aria-expanded='true'] + .main-menus{
+        transform: translateX(0%);
+    }
+    
+
+    @media screen and (min-width:1220px){
+
+        .main-menus{
+            flex-direction: row;
+            position: static;
+            transform: none;
+            width: unset;
+
+            a{
+               font-size: 2rem;
+            }
+
+            .menu{
+                display: flex;
+            }
+        }
+
+        & #toggle-menu{
+            display: none;
+        }
+
+        .social{
+            display: none;
+        }
+    }
+}
+

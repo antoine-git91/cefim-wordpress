@@ -1,0 +1,44 @@
+.hero{
+    padding: 9rem 0 9rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width:768px){
+        padding: 24rem 0 17rem;
+    }
+
+    h1{
+        color: #fff;
+        font-family: 'Raleway';
+        font-size: 9vw;
+        margin-bottom: 3rem;
+    }
+
+    @media screen and (min-width:768px){
+        h1{
+            font-size: 7.2rem;
+        }
+    }
+
+    @media
+        (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi) {
+          background-image: url('../pictures/photo/Photo-arriere-plan@2x.png');
+      }
+    
+}
+.cta-hero{
+    margin-left: auto;
+    max-width: 95.6rem;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media screen and (min-width:768px){
+        margin-right: 2rem;
+
+    }
+} 

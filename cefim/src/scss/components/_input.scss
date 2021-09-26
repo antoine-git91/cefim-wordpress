@@ -1,0 +1,54 @@
+.group-item-form{
+    display: flex;
+    flex-direction: column;
+
+    .label-contact{
+        color: #000;
+        margin-bottom: 2rem;
+    }
+}
+
+input::placeholder, textarea::placeholder{
+    font-style: italic;
+    columns: #33110080;
+}
+
+form{
+    width: 100%;
+    margin-bottom: 4.45rem;
+    display: flex;
+
+    label{
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input{
+            width: 100%;
+            margin-top: 1rem;
+            @include text-user-field;
+            width: 100%;
+        }
+    }
+
+    input[type='submit']{
+        margin-top: 0;
+    }
+
+    textarea{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width:768px) {
+        label{
+            width: 48%;
+
+            &:last-of-type{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

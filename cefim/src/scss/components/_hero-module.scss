@@ -1,0 +1,19 @@
+.header-module-article{
+    padding: 9rem 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 4rem;
+
+    h1{
+        font-size: 4.8rem;
+        text-align: center;
+        color: #fff;
+        max-width: $max-width-content-text;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width:768px){
+        padding: 17rem 0;
+    }
+}

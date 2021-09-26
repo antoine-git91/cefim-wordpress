@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.main-home{
+    padding-bottom: 0;
+
+    h2{
+        font-size: 4.8rem;
+    }
+}
+
+.actuality{
+    @include section-home;
+}
+
+/*.students{
+    @include section-home($background-color:$brand-color, $color-font:#fff);
+
+    .link-profile{
+        color: #fff;
+    }
+}*/
+
+.formation{
+    @include section-home;
+}
